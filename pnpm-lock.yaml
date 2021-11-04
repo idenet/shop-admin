@@ -4,6 +4,7 @@ specifiers:
   '@commitlint/cli': ^14.1.0
   '@commitlint/config-conventional': ^14.1.0
   '@nabla/vite-plugin-eslint': ^1.3.2
+  '@types/node': ^16.11.6
   '@typescript-eslint/eslint-plugin': ^5.3.0
   '@typescript-eslint/parser': ^5.3.0
   '@vitejs/plugin-vue': ^1.9.3
@@ -16,18 +17,24 @@ specifiers:
   eslint-plugin-vue: ^8.0.3
   husky: ^7.0.4
   lint-staged: ^11.2.6
+  sass: ^1.43.4
   typescript: ^4.4.3
   vite: ^2.6.4
   vue: ^3.2.16
+  vue-router: '4'
   vue-tsc: ^0.3.0
+  vuex: ^4.0.2
 
 dependencies:
   vue: 3.2.21
+  vue-router: 4.0.12_vue@3.2.21
+  vuex: 4.0.2_vue@3.2.21
 
 devDependencies:
   '@commitlint/cli': 14.1.0
   '@commitlint/config-conventional': 14.1.0
   '@nabla/vite-plugin-eslint': 1.3.2_eslint@7.32.0+vite@2.6.13
+  '@types/node': 16.11.6
   '@typescript-eslint/eslint-plugin': 5.3.0_17f50caceef7fa1e82b14d5986b10305
   '@typescript-eslint/parser': 5.3.0_eslint@7.32.0+typescript@4.4.4
   '@vitejs/plugin-vue': 1.9.4_vite@2.6.13
@@ -40,8 +47,9 @@ devDependencies:
   eslint-plugin-vue: 8.0.3_eslint@7.32.0
   husky: 7.0.4
   lint-staged: 11.2.6
+  sass: 1.43.4
   typescript: 4.4.4
-  vite: 2.6.13
+  vite: 2.6.13_sass@1.43.4
   vue-tsc: 0.3.0_typescript@4.4.4
 
 packages:
@@ -83,6 +91,8 @@ packages:
       json5: 2.2.0
       semver: 6.3.0
       source-map: 0.5.7
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /@babel/generator/7.16.0:
@@ -127,6 +137,8 @@ packages:
       '@babel/helper-optimise-call-expression': 7.16.0
       '@babel/helper-replace-supers': 7.16.0
       '@babel/helper-split-export-declaration': 7.16.0
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /@babel/helper-function-name/7.16.0:
@@ -178,6 +190,8 @@ packages:
       '@babel/template': 7.16.0
       '@babel/traverse': 7.16.0
       '@babel/types': 7.16.0
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /@babel/helper-optimise-call-expression/7.16.0:
@@ -200,6 +214,8 @@ packages:
       '@babel/helper-optimise-call-expression': 7.16.0
       '@babel/traverse': 7.16.0
       '@babel/types': 7.16.0
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /@babel/helper-simple-access/7.16.0:
@@ -233,6 +249,8 @@ packages:
       '@babel/template': 7.16.0
       '@babel/traverse': 7.16.0
       '@babel/types': 7.16.0
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /@babel/highlight/7.16.0:
@@ -288,6 +306,8 @@ packages:
       '@babel/helper-create-class-features-plugin': 7.16.0_@babel+core@7.16.0
       '@babel/helper-plugin-utils': 7.14.5
       '@babel/plugin-syntax-typescript': 7.16.0_@babel+core@7.16.0
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /@babel/template/7.16.0:
@@ -312,6 +332,8 @@ packages:
       '@babel/types': 7.16.0
       debug: 4.3.2
       globals: 11.12.0
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /@babel/types/7.16.0:
@@ -507,6 +529,8 @@ packages:
       js-yaml: 3.14.1
       minimatch: 3.0.4
       strip-json-comments: 3.1.1
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /@humanwhocodes/config-array/0.5.0:
@@ -516,6 +540,8 @@ packages:
       '@humanwhocodes/object-schema': 1.2.1
       debug: 4.3.2
       minimatch: 3.0.4
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /@humanwhocodes/object-schema/1.2.1:
@@ -531,7 +557,7 @@ packages:
       '@types/eslint': 7.28.2
       chalk: 4.1.2
       eslint: 7.32.0
-      vite: 2.6.13
+      vite: 2.6.13_sass@1.43.4
     dev: true
 
   /@nodelib/fs.scandir/2.1.5:
@@ -586,6 +612,10 @@ packages:
     resolution: {integrity: sha1-7nceK6Sz3Fs3KTXVSf2WF780W4w=, tarball: '@types/minimist/download/@types/minimist-1.2.2.tgz'}
     dev: true
 
+  /@types/node/16.11.6:
+    resolution: {integrity: sha1-a+96KgrWhM9ukPz+Mc7KvZzgo64=, tarball: '@types/node/download/@types/node-16.11.6.tgz?cache=0&sync_timestamp=1635216109955&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2F%40types%2Fnode%2Fdownload%2F%40types%2Fnode-16.11.6.tgz'}
+    dev: true
+
   /@types/normalize-package-data/2.4.1:
     resolution: {integrity: sha1-0zV0eaD9/dWQf+Z+F+CoXJBuEwE=, tarball: '@types/normalize-package-data/download/@types/normalize-package-data-2.4.1.tgz'}
     dev: true
@@ -616,6 +646,8 @@ packages:
       semver: 7.3.5
       tsutils: 3.21.0_typescript@4.4.4
       typescript: 4.4.4
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /@typescript-eslint/experimental-utils/5.3.0_eslint@7.32.0+typescript@4.4.4:
@@ -632,6 +664,7 @@ packages:
       eslint-scope: 5.1.1
       eslint-utils: 3.0.0_eslint@7.32.0
     transitivePeerDependencies:
+      - supports-color
       - typescript
     dev: true
 
@@ -651,6 +684,8 @@ packages:
       debug: 4.3.2
       eslint: 7.32.0
       typescript: 4.4.4
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /@typescript-eslint/scope-manager/5.3.0:
@@ -683,6 +718,8 @@ packages:
       semver: 7.3.5
       tsutils: 3.21.0_typescript@4.4.4
       typescript: 4.4.4
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /@typescript-eslint/visitor-keys/5.3.0:
@@ -703,6 +740,8 @@ packages:
       '@rollup/pluginutils': 4.1.1
       '@vue/babel-plugin-jsx': 1.1.1_@babel+core@7.16.0
       hash-sum: 2.0.0
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /@vitejs/plugin-vue/1.9.4_vite@2.6.13:
@@ -711,7 +750,7 @@ packages:
     peerDependencies:
       vite: ^2.5.10
     dependencies:
-      vite: 2.6.13
+      vite: 2.6.13_sass@1.43.4
     dev: true
 
   /@volar/code-gen/0.27.24:
@@ -780,6 +819,7 @@ packages:
       svg-tags: 1.0.0
     transitivePeerDependencies:
       - '@babel/core'
+      - supports-color
     dev: true
 
   /@vue/compiler-core/3.2.21:
@@ -816,6 +856,10 @@ packages:
     dependencies:
       '@vue/compiler-dom': 3.2.21
       '@vue/shared': 3.2.21
+    dev: false
+
+  /@vue/devtools-api/6.0.0-beta.20:
+    resolution: {integrity: sha1-tUBcmoT7RGh9BefEx4VLFjkUEQY=, tarball: '@vue/devtools-api/download/@vue/devtools-api-6.0.0-beta.20.tgz'}
     dev: false
 
   /@vue/reactivity/3.2.21:
@@ -954,6 +998,14 @@ packages:
       color-convert: 2.0.1
     dev: true
 
+  /anymatch/3.1.2:
+    resolution: {integrity: sha1-wFV8CWrzLxBhmPT04qODU343hxY=, tarball: anymatch/download/anymatch-3.1.2.tgz}
+    engines: {node: '>= 8'}
+    dependencies:
+      normalize-path: 3.0.0
+      picomatch: 2.3.0
+    dev: true
+
   /arg/4.1.3:
     resolution: {integrity: sha1-Jp/HrVuOQstjyJbVZmAXJhwUQIk=, tarball: arg/download/arg-4.1.3.tgz}
     dev: true
@@ -1020,6 +1072,11 @@ packages:
 
   /balanced-match/1.0.2:
     resolution: {integrity: sha1-6D46fj8wCzTLnYf2FfoMvzV2kO4=, tarball: balanced-match/download/balanced-match-1.0.2.tgz}
+    dev: true
+
+  /binary-extensions/2.2.0:
+    resolution: {integrity: sha1-dfUC7q+f/eQvyYgpZFvk6na9ni0=, tarball: binary-extensions/download/binary-extensions-2.2.0.tgz}
+    engines: {node: '>=8'}
     dev: true
 
   /brace-expansion/1.1.11:
@@ -1108,6 +1165,21 @@ packages:
     resolution: {integrity: sha1-x84o821LzZdE5f/CxfzeHHMmH8A=, tarball: character-parser/download/character-parser-2.2.0.tgz}
     dependencies:
       is-regex: 1.1.4
+    dev: true
+
+  /chokidar/3.5.2:
+    resolution: {integrity: sha1-26OXb8rbAW9m/TZQIdkWANAcHnU=, tarball: chokidar/download/chokidar-3.5.2.tgz}
+    engines: {node: '>= 8.10.0'}
+    dependencies:
+      anymatch: 3.1.2
+      braces: 3.0.2
+      glob-parent: 5.1.2
+      is-binary-path: 2.1.0
+      is-glob: 4.0.3
+      normalize-path: 3.0.0
+      readdirp: 3.6.0
+    optionalDependencies:
+      fsevents: 2.3.2
     dev: true
 
   /clean-stack/2.2.0:
@@ -1279,8 +1351,26 @@ packages:
   /debug/4.3.2:
     resolution: {integrity: sha1-8KScGKyHeeMdSgxgKd+3aHPHQos=, tarball: debug/download/debug-4.3.2.tgz}
     engines: {node: '>=6.0'}
+    peerDependencies:
+      supports-color: '*'
+    peerDependenciesMeta:
+      supports-color:
+        optional: true
     dependencies:
       ms: 2.1.2
+    dev: true
+
+  /debug/4.3.2_supports-color@8.1.1:
+    resolution: {integrity: sha1-8KScGKyHeeMdSgxgKd+3aHPHQos=, tarball: debug/download/debug-4.3.2.tgz}
+    engines: {node: '>=6.0'}
+    peerDependencies:
+      supports-color: '*'
+    peerDependenciesMeta:
+      supports-color:
+        optional: true
+    dependencies:
+      ms: 2.1.2
+      supports-color: 8.1.1
     dev: true
 
   /decamelize-keys/1.1.0:
@@ -1711,6 +1801,8 @@ packages:
       natural-compare: 1.4.0
       semver: 7.3.5
       vue-eslint-parser: 8.0.1_eslint@7.32.0
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /eslint-scope/5.1.1:
@@ -1806,6 +1898,8 @@ packages:
       table: 6.7.2
       text-table: 0.2.0
       v8-compile-cache: 2.3.0
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /espree/7.3.1:
@@ -2225,6 +2319,13 @@ packages:
       has-bigints: 1.0.1
     dev: true
 
+  /is-binary-path/2.1.0:
+    resolution: {integrity: sha1-6h9/O4DwZCNug0cPhsCcJU+0Wwk=, tarball: is-binary-path/download/is-binary-path-2.1.0.tgz}
+    engines: {node: '>=8'}
+    dependencies:
+      binary-extensions: 2.2.0
+    dev: true
+
   /is-boolean-object/1.1.2:
     resolution: {integrity: sha1-XG3CACRt2TIa5LiFoRS7H3X2Nxk=, tarball: is-boolean-object/download/is-boolean-object-1.1.2.tgz}
     engines: {node: '>= 0.4'}
@@ -2470,7 +2571,7 @@ packages:
       colorette: 1.4.0
       commander: 8.3.0
       cosmiconfig: 7.0.1
-      debug: 4.3.2
+      debug: 4.3.2_supports-color@8.1.1
       enquirer: 2.3.6
       execa: 5.1.1
       listr2: 3.13.3_enquirer@2.3.6
@@ -3039,6 +3140,13 @@ packages:
       util-deprecate: 1.0.2
     dev: true
 
+  /readdirp/3.6.0:
+    resolution: {integrity: sha1-dKNwvYVxFuJFspzJc0DNQxoCpsc=, tarball: readdirp/download/readdirp-3.6.0.tgz}
+    engines: {node: '>=8.10.0'}
+    dependencies:
+      picomatch: 2.3.0
+    dev: true
+
   /redent/3.0.0:
     resolution: {integrity: sha1-5Ve3mYMWu1PJ8fVvpiY1LGljBZ8=, tarball: redent/download/redent-3.0.0.tgz}
     engines: {node: '>=8'}
@@ -3136,6 +3244,14 @@ packages:
 
   /safe-buffer/5.2.1:
     resolution: {integrity: sha1-Hq+fqb2x/dTsdfWPnNtOa3gn7sY=, tarball: safe-buffer/download/safe-buffer-5.2.1.tgz}
+    dev: true
+
+  /sass/1.43.4:
+    resolution: {integrity: sha1-aMfWobAEvvSa8NnK91DpslIQXR8=, tarball: sass/download/sass-1.43.4.tgz}
+    engines: {node: '>=8.9.0'}
+    hasBin: true
+    dependencies:
+      chokidar: 3.5.2
     dev: true
 
   /semver-compare/1.0.0:
@@ -3533,7 +3649,7 @@ packages:
       spdx-expression-parse: 3.0.1
     dev: true
 
-  /vite/2.6.13:
+  /vite/2.6.13_sass@1.43.4:
     resolution: {integrity: sha1-FrPshaZtW0YawpqQOHTUNX+a9DI=, tarball: vite/download/vite-2.6.13.tgz}
     engines: {node: '>=12.2.0'}
     hasBin: true
@@ -3553,6 +3669,7 @@ packages:
       postcss: 8.3.11
       resolve: 1.20.0
       rollup: 2.59.0
+      sass: 1.43.4
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
@@ -3693,7 +3810,18 @@ packages:
       esquery: 1.4.0
       lodash: 4.17.21
       semver: 7.3.5
+    transitivePeerDependencies:
+      - supports-color
     dev: true
+
+  /vue-router/4.0.12_vue@3.2.21:
+    resolution: {integrity: sha1-jceSzd9bsavMOQj5BkE23n4TxGA=, tarball: vue-router/download/vue-router-4.0.12.tgz}
+    peerDependencies:
+      vue: ^3.0.0
+    dependencies:
+      '@vue/devtools-api': 6.0.0-beta.20
+      vue: 3.2.21
+    dev: false
 
   /vue-tsc/0.3.0_typescript@4.4.4:
     resolution: {integrity: sha1-Ozhyv08dLkQJtXrb2CYDLiU9tAY=, tarball: vue-tsc/download/vue-tsc-0.3.0.tgz}
@@ -3713,6 +3841,15 @@ packages:
       '@vue/runtime-dom': 3.2.21
       '@vue/server-renderer': 3.2.21_vue@3.2.21
       '@vue/shared': 3.2.21
+    dev: false
+
+  /vuex/4.0.2_vue@3.2.21:
+    resolution: {integrity: sha1-+Jbb1b8qDpY/AMZ+m2EN50nMrMk=, tarball: vuex/download/vuex-4.0.2.tgz}
+    peerDependencies:
+      vue: ^3.0.2
+    dependencies:
+      '@vue/devtools-api': 6.0.0-beta.20
+      vue: 3.2.21
     dev: false
 
   /which-boxed-primitive/1.0.2:

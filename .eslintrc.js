@@ -13,5 +13,7 @@ module.exports = {
   plugins: ['vue', '@typescript-eslint'],
   rules: {
     'comma-dangle': ['error', 'always-multiline'],
+    indent: 'off',
+    '@typescript-eslint/indent': ['error', 2],
   },
 }

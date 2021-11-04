@@ -16,7 +16,13 @@
     "isolatedModules": true,
     "types": [
       "vite/client"
-    ]
+    ],
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    },
+    "baseUrl": "./",
   },
   "include": [
     "src/**/*.ts",
