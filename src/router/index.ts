@@ -1,10 +1,18 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
 
+import AppLayoutVue from '@/layout/AppLayout.vue'
+
 const routes: RouteRecordRaw[] = [
   {
     path: '/',
-    name: 'home',
-    component: () => import('../views/home/index.vue'),
+    component: AppLayoutVue,
+    children: [
+      {
+        path: '', // 默认子路由
+        name: 'home',
+        component: () => import('../views/home/index.vue'),
+      },
+    ],
   },
   {
     path: '/login',
