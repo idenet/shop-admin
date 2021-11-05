@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import eslintPlugin from '@nabla/vite-plugin-eslint'
+import eslintPlugin from 'vite-plugin-eslint'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import path from 'path'
 
@@ -9,9 +9,7 @@ export default defineConfig({
   plugins: [
     vue(),
     eslintPlugin({
-      eslintOptions: {
-        cache: false, // 禁用缓存
-      },
+      cache: false,
     }),
     vueJsx({
       // 配置选项
@@ -25,7 +23,7 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: '@import "@/styles/variable.scss;"',
+        additionalData: '@import "@/styles/variables.scss";',
       },
     },
   },

@@ -16,4 +16,12 @@ module.exports = {
     indent: 'off',
     '@typescript-eslint/indent': ['error', 2],
   },
+  overrides: [
+    {
+      files: ['src/api/**/*.ts'],
+      rules: {
+        camelcase: 'off',
+      },
+    },
+  ],
 }
