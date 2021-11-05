@@ -1,10 +1,12 @@
 <template>
   <el-menu
-    active-text-color="#ffd04b"
-    background-color="#304156"
+    :unique-opened="false"
+    :default-active="$route.path"
     class="el-menu-vertical-demo"
-    default-active="2"
-    text-color="#fff"
+    background-color="#304156"
+    text-color="#bcc0c5"
+    active-text-color="#2d8cf0"
+    :collapse="store.state.isCollapse"
     router
   >
     <el-menu-item index="/">
@@ -87,10 +89,17 @@
 </template>
 
 <script lang='ts' setup>
+import { useStore } from '@/store'
+const store = useStore()
 </script>
 
 <style lang='scss' scoped>
 .el-menu {
   border-right: none;
+}
+
+.el-menu:not(.el-menu--collapse) {
+  width: 200px;
+  min-height: 400px;
 }
 </style>

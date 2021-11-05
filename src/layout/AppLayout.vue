@@ -4,7 +4,9 @@
       <AppMenu />
     </el-aside>
     <el-container>
-      <el-header>Header</el-header>
+      <el-header>
+        <AppHeader />
+      </el-header>
       <el-main>
         <router-view></router-view>
       </el-main>
@@ -13,20 +15,24 @@
 </template>
 
 <script lang='ts' setup>
-import AppMenu from './components/AppMenu.vue'
+import AppMenu from './AppMenu/AppMenu.vue'
+import AppHeader from './AppHeader/index.vue'
 </script>
 
 <style lang='scss' scoped>
 .el-container {
   height: 100vh;
 }
-.el-header,
-.el-footer {
-  background-color: #b3c0d1;
-  color: var(--el-text-color-primary);
+.el-header {
+  background-color: #fff;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .el-aside {
+  width: auto;
   background-color: #304156;
   color: var(--el-text-color-primary);
 }
