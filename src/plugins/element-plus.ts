@@ -7,7 +7,6 @@ import { App } from 'vue'
 export default {
   install (app: App) {
     app.use(ElementPlus, {
-      size: 'small',
       zIndex: 2000,
       locale: zhCn,
     })

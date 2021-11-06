@@ -6,6 +6,7 @@ import path from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: './',
   plugins: [
     vue(),
     eslintPlugin({
@@ -18,6 +19,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': path.join(__dirname, 'src'),
+      '/assets': 'src/assets',
     },
   },
   css: {

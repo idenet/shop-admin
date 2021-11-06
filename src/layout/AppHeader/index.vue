@@ -7,7 +7,7 @@
     <MenuSearch />
     <FullScreen />
     <Notification />
-    <!-- <UserInfo /> -->
+    <UserInfo />
   </el-space>
 </template>
 
@@ -17,7 +17,7 @@ import Breadcrumb from './Breadcrumb.vue'
 import MenuSearch from './MenuSearch.vue'
 import FullScreen from './FullScreen.vue'
 import Notification from './Notification.vue'
-// import UserInfo from './UserInfo.vue'
+import UserInfo from './UserInfo.vue'
 
 </script>
 

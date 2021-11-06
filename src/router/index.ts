@@ -1,5 +1,8 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
 
+import nprogress from 'nprogress'
+import 'nprogress/nprogress.css'
+
 import AppLayoutVue from '@/layout/AppLayout.vue'
 import productRoutes from './modules/product'
 import settingRoutes from './modules/setting'
@@ -22,17 +25,27 @@ const routes: RouteRecordRaw[] = [
       settingRoutes,
       systemRoutes,
     ],
+
   },
   {
     path: '/login',
     name: 'login',
     component: () => import('../views/login/index.vue'),
   },
+
 ]
 
 const router = createRouter({
   history: createWebHashHistory(), // 路由模式
   routes: routes, // 路由规则
+})
+
+router.beforeEach((to) => {
+  nprogress.start()
+})
+
+router.afterEach(() => {
+  nprogress.done()
 })
 
 export default router
