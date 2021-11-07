@@ -9,7 +9,7 @@ const permissionRoutes: RouteRecordRaw = {
   },
   children: [
     {
-      path: 'system_admin/index',
+      path: 'permission/admin',
       name: 'system_admin-index',
       component: () => import('@/views/permission/admin/index.vue'),
       meta: { // 自定义路由元数据
@@ -17,7 +17,7 @@ const permissionRoutes: RouteRecordRaw = {
       },
     },
     {
-      path: 'system_role/index',
+      path: 'permission/role',
       name: 'system_role-index',
       component: () => import('@/views/permission/role/index.vue'),
       meta: {

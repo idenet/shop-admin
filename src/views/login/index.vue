@@ -64,8 +64,8 @@ const captchaCode = ref('')
 const form = ref<IElForm | null>(null)
 
 const user = reactive({
-  account: 'admin',
-  pwd: '123456',
+  account: 'zce',
+  pwd: 'wanglei',
   imgcode: '',
 })
 

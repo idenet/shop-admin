@@ -6,4 +6,11 @@ import elementPlus from './plugins/element-plus'
 
 import './styles/index.scss'
 
-createApp(App).use(router).use(elementPlus).use(store, key).mount('#app')
+const app = createApp(App)
+// 自动注册全局组件
+const modules = import.meta.globEager('./composables/**/index.ts')
+for (const path in modules) {
+  app.use(modules[path].default)
+}
+
+app.use(router).use(elementPlus).use(store, key).mount('#app')
