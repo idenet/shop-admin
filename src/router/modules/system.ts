@@ -5,6 +5,7 @@ const routes: RouteRecordRaw = {
   component: RouterView,
   meta: {
     title: '维护',
+    requiresAuth: true,
   },
   children: [
     {

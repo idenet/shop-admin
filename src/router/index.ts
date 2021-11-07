@@ -7,11 +7,15 @@ import AppLayoutVue from '@/layout/AppLayout.vue'
 import productRoutes from './modules/product'
 import settingRoutes from './modules/setting'
 import systemRoutes from './modules/system'
+import { store } from '@/store'
 
 const routes: RouteRecordRaw[] = [
   {
     path: '/',
     component: AppLayoutVue,
+    meta: {
+      requiresAuth: true,
+    },
     children: [
       {
         path: '', // 默认子路由
@@ -42,6 +46,12 @@ const router = createRouter({
 
 router.beforeEach((to) => {
   nprogress.start()
+  if (to.meta.requiresAuth && !store.state.user) {
+    return {
+      path: '/login',
+      query: { redirect: to.fullPath },
+    }
+  }
 })
 
 router.afterEach(() => {

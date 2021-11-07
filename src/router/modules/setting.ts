@@ -5,6 +5,7 @@ const permissionRoutes: RouteRecordRaw = {
   component: RouterView,
   meta: {
     title: '权限管理',
+    requiresAuth: true,
   },
   children: [
     {

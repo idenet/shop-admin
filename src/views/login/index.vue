@@ -51,12 +51,13 @@
 <script lang="ts" setup>
 import { onMounted, reactive, ref } from 'vue'
 import { getCaptcha, login } from '@/api/common'
-import { useRouter } from 'vue-router'
+import { useRouter, useRoute } from 'vue-router'
 import type { IElForm, IFormRule } from '@/types/element-plus'
 import { Key, Lock, User } from '@element-plus/icons'
 import { store } from '@/store'
 
 const router = useRouter()
+const route = useRoute()
 const captchaCode = ref('')
 
 // 自动关联 ref = 'form'
@@ -103,12 +104,13 @@ const handleSubmit = async () => {
   const data = await login(user).finally(() => {
     loading.value = false
   })
-  store.commit('setUser', data.user_info)
-  router.replace({
-    name: 'home',
-  })
+  store.commit('setUser', { ...data.user_info, token: data.token })
+  let redirect = route.query.redirect || '/'
+  if (typeof redirect !== 'string') {
+    redirect = '/'
+  }
+  router.replace(redirect)
   // 处理响应
-  console.log('handleSubmit')
 }
 </script>
 
