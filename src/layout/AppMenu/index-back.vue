@@ -13,7 +13,7 @@
       <i class="el-icon-menu" />
       <template #title>首页</template>
     </el-menu-item>
-    <el-submenu index="1">
+    <el-sub-menu index="/product">
       <template #title>
         <i class="el-icon-location" />
         <span>商品</span>
@@ -34,8 +34,8 @@
         <i class="el-icon-menu" />
         <template #title>商品评论</template>
       </el-menu-item>
-    </el-submenu>
-    <el-submenu index="2">
+    </el-sub-menu>
+    <el-sub-menu index="2">
       <template #title>
         <i class="el-icon-location" />
         <span>订单</span>
@@ -48,52 +48,54 @@
         <i class="el-icon-menu" />
         <template #title>收银订单</template>
       </el-menu-item>
-    </el-submenu>
-    <el-submenu index="3">
+    </el-sub-menu>
+    <el-sub-menu index="3">
       <template #title>
         <i class="el-icon-location" />
         <span>营销</span>
       </template>
-    </el-submenu>
-    <el-submenu index="4">
+    </el-sub-menu>
+    <el-sub-menu index="4">
       <template #title>
         <i class="el-icon-location" />
         <span>设置</span>
       </template>
-      <el-submenu index="/setting/permission">
+      <el-sub-menu index="/setting">
         <template #title>
           <i class="el-icon-location" />
           <span>权限管理</span>
         </template>
-        <el-menu-item index="/setting/permission/admin">
+        <el-menu-item index="/setting/system_admin/index">
           <i class="el-icon-menu" />
           <template #title>管理员</template>
         </el-menu-item>
-        <el-menu-item index="/setting/permission/role">
+        <el-menu-item index="/setting/system_role/index">
           <i class="el-icon-menu" />
           <template #title>角色</template>
         </el-menu-item>
-        <el-menu-item index="/setting/permission/rule">
+        <el-menu-item index="/setting/system_menus/index">
           <i class="el-icon-menu" />
           <template #title>规则</template>
         </el-menu-item>
-      </el-submenu>
-    </el-submenu>
-    <el-submenu index="5">
+      </el-sub-menu>
+    </el-sub-menu>
+    <el-sub-menu index="/system/file">
       <template #title>
         <i class="el-icon-location" />
         <span>维护</span>
       </template>
-    </el-submenu>
+    </el-sub-menu>
   </el-menu>
 </template>
 
-<script lang='ts' setup>
-import { useStore } from '@/store'
+<script lang="ts" setup>
+
+import { useStore } from '@/store';
 const store = useStore()
+
 </script>
 
-<style lang='scss' scoped>
+<style lang="scss" scoped>
 .el-menu {
   border-right: none;
 }

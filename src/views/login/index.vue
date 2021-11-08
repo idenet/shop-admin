@@ -55,6 +55,7 @@ import { useRouter, useRoute } from 'vue-router'
 import type { IElForm, IFormRule } from '@/types/element-plus'
 import { Key, Lock, User } from '@element-plus/icons'
 import { store } from '@/store'
+import { ElMessage } from 'element-plus'
 
 const router = useRouter()
 const route = useRoute()
@@ -101,10 +102,18 @@ const handleSubmit = async () => {
   // 验证通过， 展示loading
   loading.value = true
   // 请求提交
-  const data = await login(user).finally(() => {
+  const data = await login(user).catch(() => {
+    loadCaptcha() // 刷新验证码
+  }).finally(() => {
     loading.value = false
   })
+  if (!data) return
+
+  ElMessage.success('登录成功')
+  // 存储用户登录信息
   store.commit('setUser', { ...data.user_info, token: data.token })
+  // 存储menu信息
+  store.commit('setMenus', data.menus)
   let redirect = route.query.redirect || '/'
   if (typeof redirect !== 'string') {
     redirect = '/'
