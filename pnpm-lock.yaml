@@ -11,7 +11,7 @@ specifiers:
   '@vitejs/plugin-vue': ^1.9.3
   '@vitejs/plugin-vue-jsx': ^1.2.0
   axios: ^0.24.0
-  element-plus: ^1.2.0-beta.1
+  element-plus: ^1.2.0-beta.2
   eslint: ^7.32.0
   eslint-config-standard: ^16.0.3
   eslint-plugin-import: ^2.25.2
@@ -29,15 +29,19 @@ specifiers:
   vue-router: ^4.0.12
   vue-tsc: ^0.3.0
   vuex: ^4.0.2
+  vxe-table: ^4.1.5
+  xe-utils: ^3.4.0
 
 dependencies:
   '@element-plus/icons': 0.0.11
   axios: 0.24.0
-  element-plus: 1.2.0-beta.1_vue@3.2.21
+  element-plus: 1.2.0-beta.2_vue@3.2.21
   nprogress: 0.2.0
   vue: 3.2.21
   vue-router: 4.0.12_vue@3.2.21
   vuex: 4.0.2_vue@3.2.21
+  vxe-table: 4.1.5_vue@3.2.21+xe-utils@3.4.0
+  xe-utils: 3.4.0
 
 devDependencies:
   '@commitlint/cli': 14.1.0
@@ -1511,8 +1515,8 @@ packages:
     resolution: {integrity: sha1-JDIEr5tMkorEXkfbvnvETDDmW/A=, tarball: electron-to-chromium/download/electron-to-chromium-1.3.888.tgz}
     dev: true
 
-  /element-plus/1.2.0-beta.1_vue@3.2.21:
-    resolution: {integrity: sha1-d7/Zk3Qb4XMVQN2Zfb3g0D0GW14=, tarball: element-plus/download/element-plus-1.2.0-beta.1.tgz}
+  /element-plus/1.2.0-beta.2_vue@3.2.21:
+    resolution: {integrity: sha1-9sYJNAXM5V+tRfCNFbipLfpy6cM=, tarball: element-plus/download/element-plus-1.2.0-beta.2.tgz}
     peerDependencies:
       vue: ^3.2.0
     dependencies:
@@ -2141,6 +2145,7 @@ packages:
   /fsevents/2.3.2:
     resolution: {integrity: sha1-ilJveLj99GI7cJ4Ll1xSwkwC/Ro=, tarball: fsevents/download/fsevents-2.3.2.tgz}
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
+    os: [darwin]
     requiresBuild: true
     dev: true
     optional: true
@@ -3965,6 +3970,16 @@ packages:
       vue: 3.2.21
     dev: false
 
+  /vxe-table/4.1.5_vue@3.2.21+xe-utils@3.4.0:
+    resolution: {integrity: sha512-D9LOPvnFqiBplhKhohTmxVfPXb2hXq3J/q4NoxLL/4GJHljbvyvgTGOqtjvUMWynGgkPDjBzZDevOgXUCPAHsw==, tarball: vxe-table/download/vxe-table-4.1.5.tgz}
+    peerDependencies:
+      vue: ^3.2.2
+      xe-utils: ^3.2.0
+    dependencies:
+      vue: 3.2.21
+      xe-utils: 3.4.0
+    dev: false
+
   /which-boxed-primitive/1.0.2:
     resolution: {integrity: sha1-E3V7yJsgmwSf5dhkMOIc9AqJqOY=, tarball: which-boxed-primitive/download/which-boxed-primitive-1.0.2.tgz}
     dependencies:
@@ -4019,6 +4034,10 @@ packages:
   /wrappy/1.0.2:
     resolution: {integrity: sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8=, tarball: wrappy/download/wrappy-1.0.2.tgz}
     dev: true
+
+  /xe-utils/3.4.0:
+    resolution: {integrity: sha1-tbUpkIWCmOgVdjxGutpXQeurFe0=, tarball: xe-utils/download/xe-utils-3.4.0.tgz}
+    dev: false
 
   /y18n/5.0.8:
     resolution: {integrity: sha1-f0k00PfKjFb5UxSTndzS3ZHOHVU=, tarball: y18n/download/y18n-5.0.8.tgz}

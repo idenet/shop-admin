@@ -69,7 +69,7 @@
       />
     </app-card>
   </page-container>
-  <!-- <role-form v-model="formVisible" v-model:role-id="roleId" @success="handleFormSuccess" /> -->
+  <role-form v-model="formVisible" v-model:role-id="roleId" @success="handleFormSuccess" />
 </template>
 
 <script lang="ts" setup>
@@ -77,6 +77,7 @@ import { ref, reactive, onMounted } from 'vue'
 import { deleteRole, getRoles, updateRoleStatus } from '@/api/role'
 import type { IListParams, Role } from '@/api/types/role'
 import { ElMessage } from 'element-plus'
+import RoleForm from './RoleForm.vue'
 
 const list = ref<Role[]>([]) // 列表数据
 const listCount = ref(0)
@@ -130,10 +131,10 @@ const handleUpdate = (id: number) => {
   formVisible.value = true
 }
 
-// const handleFormSuccess = () => {
-//   formVisible.value = false
-//   loadList()
-// }
+const handleFormSuccess = () => {
+  formVisible.value = false
+  loadList()
+}
 
 </script>
 

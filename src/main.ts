@@ -2,6 +2,9 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 import { store, key } from './store'
+import 'xe-utils'
+import VXETable from 'vxe-table'
+import 'vxe-table/lib/style.css'
 import elementPlus from './plugins/element-plus'
 
 import './styles/index.scss'
@@ -13,4 +16,4 @@ for (const path in modules) {
   app.use(modules[path].default)
 }
 
-app.use(router).use(elementPlus).use(store, key).mount('#app')
+app.use(router).use(elementPlus).use(store, key).use(VXETable).mount('#app')

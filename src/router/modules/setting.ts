@@ -25,7 +25,7 @@ const permissionRoutes: RouteRecordRaw = {
       },
     },
     {
-      path: 'system_menus/index',
+      path: 'permission/rule',
       name: 'system_menus-index',
       component: () => import('@/views/permission/rule/index.vue'),
       meta: {
