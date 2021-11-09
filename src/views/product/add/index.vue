@@ -41,6 +41,7 @@
         </el-form-item>
         <el-form-item v-if="product.spec_type === 1" class="multi-attr-form_item" label="规格模板">
           <el-space direction="vertical" fill style="width: 100%;" alignment="flex-start">
+            <!-- 规格模板 -->
             <AttrTemplate @confirm="attrTpl = $event" />
             <AttrEdit v-if="attrTpl.length" v-model="attrTpl" @confirm="handleAttrEditConfirm" />
             <template v-if="multiAttrData.length">

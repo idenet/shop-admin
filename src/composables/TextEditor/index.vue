@@ -38,7 +38,7 @@ const initEditor = () => {
   editor.value.config.onchange = function (newHtml: string) {
     emit('update:model-value', newHtml)
   }
-
+  editor.value.config.zIndex = 500
   editor.value.create()
   // editor.value.txt.html(props.modelValue) // 必须在create之后
 }

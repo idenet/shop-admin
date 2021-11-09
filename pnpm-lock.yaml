@@ -4,6 +4,7 @@ specifiers:
   '@commitlint/cli': ^14.1.0
   '@commitlint/config-conventional': ^14.1.0
   '@element-plus/icons': ^0.0.11
+  '@types/lodash': ^4.14.176
   '@types/node': ^16.11.6
   '@types/nprogress': ^0.2.0
   '@types/sortablejs': ^1.10.7
@@ -12,7 +13,7 @@ specifiers:
   '@vitejs/plugin-vue': ^1.9.3
   '@vitejs/plugin-vue-jsx': ^1.2.0
   axios: ^0.24.0
-  element-plus: ^1.2.0-beta.2
+  element-plus: ^1.2.0-beta.3
   eslint: ^7.32.0
   eslint-config-standard: ^16.0.3
   eslint-plugin-import: ^2.25.2
@@ -21,6 +22,7 @@ specifiers:
   eslint-plugin-vue: ^8.0.3
   husky: ^7.0.4
   lint-staged: ^11.2.6
+  lodash: ^4.17.21
   nprogress: ^0.2.0
   sass: ^1.43.4
   sortablejs: ^1.14.0
@@ -40,7 +42,8 @@ specifiers:
 dependencies:
   '@element-plus/icons': 0.0.11
   axios: 0.24.0
-  element-plus: 1.2.0-beta.2_vue@3.2.21
+  element-plus: 1.2.0-beta.3_vue@3.2.21
+  lodash: 4.17.21
   nprogress: 0.2.0
   sortablejs: 1.14.0
   vue: 3.2.21
@@ -55,6 +58,7 @@ dependencies:
 devDependencies:
   '@commitlint/cli': 14.1.0
   '@commitlint/config-conventional': 14.1.0
+  '@types/lodash': 4.14.176
   '@types/node': 16.11.6
   '@types/nprogress': 0.2.0
   '@types/sortablejs': 1.10.7
@@ -630,6 +634,10 @@ packages:
 
   /@types/json5/0.0.29:
     resolution: {integrity: sha1-7ihweulOEdK4J7y+UnC86n8+ce4=, tarball: '@types/json5/download/@types/json5-0.0.29.tgz'}
+    dev: true
+
+  /@types/lodash/4.14.176:
+    resolution: {integrity: sha1-ZBFQ/BzaNvv6Mp3mA7uxddfuIMA=, tarball: '@types/lodash/download/@types/lodash-4.14.176.tgz'}
     dev: true
 
   /@types/minimist/1.2.2:
@@ -1597,8 +1605,8 @@ packages:
     resolution: {integrity: sha1-JDIEr5tMkorEXkfbvnvETDDmW/A=, tarball: electron-to-chromium/download/electron-to-chromium-1.3.888.tgz}
     dev: true
 
-  /element-plus/1.2.0-beta.2_vue@3.2.21:
-    resolution: {integrity: sha1-9sYJNAXM5V+tRfCNFbipLfpy6cM=, tarball: element-plus/download/element-plus-1.2.0-beta.2.tgz}
+  /element-plus/1.2.0-beta.3_vue@3.2.21:
+    resolution: {integrity: sha512-vvUxR3uL2k9K+WCWz/98hq4uPQ6jvfGf0hfzWvao7pySJkNQq9DtRPC6/4/zUceA/J6Y2Yo3xSbR19JRCwurRw==, tarball: element-plus/download/element-plus-1.2.0-beta.3.tgz}
     peerDependencies:
       vue: ^3.2.0
     dependencies:
