@@ -1,6 +1,6 @@
 <template>
   <el-menu
-    :unique-opened="false"
+    :unique-opened="true"
     :default-active="$route.path"
     class="el-menu-vertical-demo"
     background-color="#304156"
@@ -35,49 +35,23 @@
         <template #title>商品评论</template>
       </el-menu-item>
     </el-sub-menu>
-    <el-sub-menu index="2">
+    <el-sub-menu index="/setting">
       <template #title>
         <i class="el-icon-location" />
-        <span>订单</span>
+        <span>权限管理</span>
       </template>
-      <el-menu-item index="2-1">
+      <el-menu-item index="/setting/system_admin/index">
         <i class="el-icon-menu" />
-        <template #title>订单管理</template>
+        <template #title>管理员</template>
       </el-menu-item>
-      <el-menu-item index="2-2">
+      <el-menu-item index="/setting/system_role/index">
         <i class="el-icon-menu" />
-        <template #title>收银订单</template>
+        <template #title>角色</template>
       </el-menu-item>
-    </el-sub-menu>
-    <el-sub-menu index="3">
-      <template #title>
-        <i class="el-icon-location" />
-        <span>营销</span>
-      </template>
-    </el-sub-menu>
-    <el-sub-menu index="4">
-      <template #title>
-        <i class="el-icon-location" />
-        <span>设置</span>
-      </template>
-      <el-sub-menu index="/setting">
-        <template #title>
-          <i class="el-icon-location" />
-          <span>权限管理</span>
-        </template>
-        <el-menu-item index="/setting/system_admin/index">
-          <i class="el-icon-menu" />
-          <template #title>管理员</template>
-        </el-menu-item>
-        <el-menu-item index="/setting/system_role/index">
-          <i class="el-icon-menu" />
-          <template #title>角色</template>
-        </el-menu-item>
-        <el-menu-item index="/setting/system_menus/index">
-          <i class="el-icon-menu" />
-          <template #title>规则</template>
-        </el-menu-item>
-      </el-sub-menu>
+      <el-menu-item index="/setting/system_menus/index">
+        <i class="el-icon-menu" />
+        <template #title>规则</template>
+      </el-menu-item>
     </el-sub-menu>
     <el-sub-menu index="/system/file">
       <template #title>
