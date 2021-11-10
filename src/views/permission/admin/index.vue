@@ -79,12 +79,7 @@
       ></app-pagination>
     </app-card>
   </page-container>
-  <AdminFormVue
-    v-model="formVisible"
-    :admin-id="adminId"
-    v-model:admin-id="adminId"
-    @success="handleFormSuccess"
-  ></AdminFormVue>
+  <AdminFormVue v-model="formVisible" v-model:admin-id="adminId" @success="handleFormSuccess"></AdminFormVue>
 </template>
 
 <script lang="ts" setup>

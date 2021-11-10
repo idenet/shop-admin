@@ -17,3 +17,12 @@ export interface CateGoryParams {
   pid?: number | string,
   cate_name?:string
 }
+
+export interface PostData {
+  big_pic?: string
+  cate_name: string
+  is_show: 0 | 1
+  pic?: string
+  pid?: string
+  sort: number
+}
