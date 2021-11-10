@@ -23,6 +23,6 @@ export interface PostData {
   cate_name: string
   is_show: 0 | 1
   pic?: string
-  pid?: string
+  pid?: number
   sort: number
 }

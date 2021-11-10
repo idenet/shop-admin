@@ -26,3 +26,8 @@ export interface FileParams {
   page?: number
   limit?:number
 }
+
+export interface IFileItem extends FileItem {
+  select?: boolean
+  showInput?: boolean
+}

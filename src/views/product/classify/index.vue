@@ -72,16 +72,26 @@
       </vxe-table>
     </app-card>
   </page-container>
-  <FormClassifyVue v-model="formVisible"></FormClassifyVue>
+  <FormClassifyVue
+    v-model="formVisible"
+    @show-dialog="bindShowDialog"
+    :spic="spic"
+    :bpic="bpic"
+    @success="handleSuccess"
+    v-model:cateId="categoryId"
+  ></FormClassifyVue>
+  <DialogPicVue v-model="picVisible" @update-pic="bindpic"></DialogPicVue>
 </template>
 
 
 <script lang='ts' setup>
-import { getCategoryList } from '@/api/classify';
+import { deleteCategory, getCategoryList, setCaterogy } from '@/api/classify';
 import { CategoryList, CateGoryParams } from '@/api/types/classify';
 import { onMounted, reactive, ref } from 'vue';
 import FormClassifyVue from './FormClassify.vue';
-
+import DialogPicVue from './DialogPic.vue';
+import { IFileItem } from '@/api/types/file';
+import { ElMessage, ElMessageBox } from 'element-plus';
 
 const listParams = reactive({
   page: 0,
@@ -97,7 +107,13 @@ const classifyList = ref<{
 }[]>([])
 const listLoading = ref(true)
 const formVisible = ref(false)
-
+const picVisible = ref(false)
+// 分图标
+const categoryId = ref<number>(0)
+const spic = ref<string>('')
+const bpic = ref<string>('')
+// 0 代表分类图片 1 代表大图
+const picType = ref<number>(0)
 
 onMounted(() => {
   loadCategoryList()
@@ -117,18 +133,47 @@ const handleQuery = () => {
   loadCategoryList()
 }
 
-const handleStatusChange = () => {
+/**
+ * 获得选择的图片
+ */
+const bindpic = (item: IFileItem) => {
+  if (picType.value == 0) {
+    spic.value = item.satt_dir
+  } else {
+    bpic.value = item.att_dir
+  }
+  picVisible.value = false
+}
 
+const bindShowDialog = (type: number) => {
+  picVisible.value = true
+  picType.value = type
+}
+// 保存成功
+const handleSuccess = () => {
+  formVisible.value = false
+  loadCategoryList()
+}
+
+const handleStatusChange = async (row: CategoryList) => {
+  await setCaterogy(row.id, row.is_show)
+  ElMessage.success('保存成功')
 }
 
 //编辑
-const handleUpdate = () => {
-
+const handleUpdate = (id: number) => {
+  categoryId.value = id
+  formVisible.value = true
 }
 
 // 删除成功
-const handleDelete = () => {
-
+const handleDelete = async (id: number) => {
+  await deleteCategory(id)
+  loadCategoryList()
+  ElMessage({
+    type: 'success',
+    message: '删除成功',
+  })
 }
 
 </script>

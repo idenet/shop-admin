@@ -3,6 +3,7 @@
     center
     ref="dialog"
     width="50%"
+    append-to-body
     :close-on-click-modal="false"
     :close-on-press-escape="false"
   >
@@ -10,7 +11,7 @@
     <template #footer>
       <span class="dialog-footer">
         <el-button @click="handleCancel">取消</el-button>
-        <el-button type="primary" @click="handleConfirm">确定</el-button>
+        <el-button type="primary" :loading="confirmLoading" @click="handleConfirm">确定</el-button>
       </span>
     </template>
   </el-dialog>

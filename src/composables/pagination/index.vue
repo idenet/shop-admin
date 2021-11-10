@@ -4,7 +4,7 @@
     :page-size="props.limit"
     background
     :total="listCount"
-    layout="total, sizes, prev, pager, next, jumper"
+    layout="total, prev, pager, next"
     @current-change="handleCurrentChange"
     @size-change="handleSizeChange"
   ></el-pagination>
