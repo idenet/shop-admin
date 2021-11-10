@@ -9,7 +9,7 @@ const routes: RouteRecordRaw = {
   },
   children: [
     {
-      path: 'file',
+      path: 'file/index',
       name: 'system-file',
       component: () => import('@/views/system/file/index.vue'),
       meta: { // 自定义路由元数据

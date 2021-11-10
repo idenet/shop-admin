@@ -5,7 +5,6 @@
     background
     :total="listCount"
     layout="total, sizes, prev, pager, next, jumper"
-    :page-sizes="[2, 3, 4]"
     @current-change="handleCurrentChange"
     @size-change="handleSizeChange"
   ></el-pagination>

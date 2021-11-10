@@ -53,11 +53,15 @@
         <template #title>规则</template>
       </el-menu-item>
     </el-sub-menu>
-    <el-sub-menu index="/system/file">
+    <el-sub-menu index="/system">
       <template #title>
         <i class="el-icon-location" />
         <span>维护</span>
       </template>
+      <el-menu-item index="/system/file/index">
+        <i class="el-icon-menu" />
+        <template #title>附件管理</template>
+      </el-menu-item>
     </el-sub-menu>
   </el-menu>
 </template>

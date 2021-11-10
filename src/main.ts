@@ -9,6 +9,7 @@ import elementPlus from './plugins/element-plus'
 
 import './styles/index.scss'
 
+
 const app = createApp(App)
 // 自动注册全局组件
 const modules = import.meta.globEager('./composables/**/index.ts')

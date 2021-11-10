@@ -1,7 +1,7 @@
 <template>
   <el-dropdown>
     <el-space class="el-dropdown-link">
-      {{ $store.state.user?.account }}
+      {{ store.state.user?.account }}
       <el-icon>
         <ArrowDownBold />
       </el-icon>

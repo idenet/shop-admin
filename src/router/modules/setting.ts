@@ -1,7 +1,7 @@
 import { RouteRecordRaw, RouterView } from 'vue-router'
 
-const permissionRoutes: RouteRecordRaw = {
-  path: '',
+const routes: RouteRecordRaw = {
+  path: 'setting',
   component: RouterView,
   meta: {
     title: '权限管理',
@@ -35,15 +35,6 @@ const permissionRoutes: RouteRecordRaw = {
   ],
 }
 
-const routes: RouteRecordRaw = {
-  path: 'setting',
-  component: RouterView,
-  meta: {
-    title: '设置',
-  },
-  children: [
-    permissionRoutes,
-  ],
-}
+
 
 export default routes

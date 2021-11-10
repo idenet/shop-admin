@@ -19,3 +19,10 @@ export interface FileCategory {
   enname: string
   child?: FileCategory[]
 }
+
+
+export interface FileParams {
+  pid?: number
+  page?: number
+  limit?:number
+}
