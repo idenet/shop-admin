@@ -13,14 +13,14 @@
             />
           </el-select>
         </el-form-item>
-        <el-form-item label="商品分类">
+        <el-form-item label="状态">
           <el-select v-model="listParams.is_show" placeholder="请选择" clearable>
             <el-option label="全部" value />
             <el-option label="显示" :value="1" />
             <el-option label="隐藏" :value="0" />
           </el-select>
         </el-form-item>
-        <el-form-item label="管理员名称">
+        <el-form-item label="商品名称">
           <el-input v-model="listParams.cate_name" clearable placeholder="请输入" />
         </el-form-item>
         <el-form-item>

@@ -2,7 +2,7 @@
   <el-dialog
     center
     ref="dialog"
-    width="50%"
+    :width="width"
     append-to-body
     :close-on-click-modal="false"
     :close-on-press-escape="false"
@@ -27,6 +27,10 @@ const props = defineProps({
   confirm: {
     type: Function as PropType<() => Promise<void>>,
     default: () => Promise.resolve(),
+  },
+  width: {
+    type: String,
+    default: '50%',
   },
 })
 
