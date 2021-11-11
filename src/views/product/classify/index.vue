@@ -91,10 +91,10 @@ import { onMounted, reactive, ref } from 'vue';
 import FormClassifyVue from './FormClassify.vue';
 import DialogPicVue from './DialogPic.vue';
 import { IFileItem } from '@/api/types/file';
-import { ElMessage, ElMessageBox } from 'element-plus';
+import { ElMessage } from 'element-plus';
 
 const listParams = reactive({
-  page: 0,
+  page: 1,
   limit: 15,
   pid: '',
   cate_name: '',

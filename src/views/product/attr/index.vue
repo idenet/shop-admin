@@ -64,7 +64,7 @@ import { onMounted, ref } from 'vue';
 import dialogAttrTemplateVue from './dialogAttrTemplate.vue';
 
 const listParams = ref<ruleParams>({
-  page: 0,
+  page: 1,
   limit: 15,
   rule_name: '',
 })
