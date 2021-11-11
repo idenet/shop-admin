@@ -11,10 +11,14 @@ import './styles/index.scss'
 
 
 const app = createApp(App)
+app.use(router)
+app.use(elementPlus)
+app.use(store, key)
+// app.use(VXETable)
 // 自动注册全局组件
 const modules = import.meta.globEager('./composables/**/index.ts')
 for (const path in modules) {
   app.use(modules[path].default)
 }
 
-app.use(router).use(elementPlus).use(store, key).use(VXETable).mount('#app')
+app.mount('#app')

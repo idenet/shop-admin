@@ -21,6 +21,7 @@ specifiers:
   eslint-plugin-promise: ^5.1.1
   eslint-plugin-vue: ^8.0.3
   husky: ^7.0.4
+  install: ^0.13.0
   lint-staged: ^11.2.6
   lodash: ^4.17.21
   nprogress: ^0.2.0
@@ -43,6 +44,7 @@ dependencies:
   '@element-plus/icons': 0.0.11
   axios: 0.24.0
   element-plus: 1.2.0-beta.3_vue@3.2.21
+  install: 0.13.0
   lodash: 4.17.21
   nprogress: 0.2.0
   sortablejs: 1.14.0
@@ -945,8 +947,8 @@ packages:
   /@vue/shared/3.2.21:
     resolution: {integrity: sha1-TNgMDmLPZaetqyRJ6GtvDLM6Ews=, tarball: '@vue/shared/download/@vue/shared-3.2.21.tgz'}
 
-  /@vueuse/core/6.7.6_vue@3.2.21:
-    resolution: {integrity: sha1-TrQCpgv1xA4E66s/GD8EhvqhQOk=, tarball: '@vueuse/core/download/@vueuse/core-6.7.6.tgz'}
+  /@vueuse/core/6.8.0_vue@3.2.21:
+    resolution: {integrity: sha1-3ABLwwAx4FPp71ARIDxKgPAJhu0=, tarball: '@vueuse/core/download/@vueuse/core-6.8.0.tgz'}
     peerDependencies:
       '@vue/composition-api': ^1.1.0
       vue: ^2.6.0 || ^3.2.0
@@ -956,13 +958,13 @@ packages:
       vue:
         optional: true
     dependencies:
-      '@vueuse/shared': 6.7.6_vue@3.2.21
+      '@vueuse/shared': 6.8.0_vue@3.2.21
       vue: 3.2.21
       vue-demi: 0.12.1_vue@3.2.21
     dev: false
 
-  /@vueuse/shared/6.7.6_vue@3.2.21:
-    resolution: {integrity: sha1-UqGqimM1oAS94xNn3b7YLd+L+lM=, tarball: '@vueuse/shared/download/@vueuse/shared-6.7.6.tgz'}
+  /@vueuse/shared/6.8.0_vue@3.2.21:
+    resolution: {integrity: sha1-UHE7dwlBKT5Vek6ulCTK0qrUSoU=, tarball: '@vueuse/shared/download/@vueuse/shared-6.8.0.tgz'}
     peerDependencies:
       '@vue/composition-api': ^1.1.0
       vue: ^2.6.0 || ^3.2.0
@@ -1450,7 +1452,7 @@ packages:
     dev: true
 
   /cross-spawn/7.0.3:
-    resolution: {integrity: sha1-9zqFudXUHQRVUcF34ogtSshXKKY=, tarball: cross-spawn/download/cross-spawn-7.0.3.tgz?cache=0&sync_timestamp=1632883303690&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fcross-spawn%2Fdownload%2Fcross-spawn-7.0.3.tgz}
+    resolution: {integrity: sha1-9zqFudXUHQRVUcF34ogtSshXKKY=, tarball: cross-spawn/download/cross-spawn-7.0.3.tgz}
     engines: {node: '>= 8'}
     dependencies:
       path-key: 3.1.1
@@ -1612,7 +1614,7 @@ packages:
     dependencies:
       '@element-plus/icons': 0.0.11
       '@popperjs/core': 2.10.2
-      '@vueuse/core': 6.7.6_vue@3.2.21
+      '@vueuse/core': 6.8.0_vue@3.2.21
       async-validator: 4.0.7
       dayjs: 1.10.7
       lodash: 4.17.21
@@ -2482,6 +2484,11 @@ packages:
   /ini/1.3.8:
     resolution: {integrity: sha1-op2kJbSIBvNHZ6Tvzjlyaa8oQyw=, tarball: ini/download/ini-1.3.8.tgz}
     dev: true
+
+  /install/0.13.0:
+    resolution: {integrity: sha1-avbp2p3QmH3iq0IPeOYNnBcmB3Y=, tarball: install/download/install-0.13.0.tgz}
+    engines: {node: '>= 0.10'}
+    dev: false
 
   /internal-slot/1.0.3:
     resolution: {integrity: sha1-c0fjB97uovqsKsYgXUvH00ln9Zw=, tarball: internal-slot/download/internal-slot-1.0.3.tgz}
