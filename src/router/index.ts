@@ -7,7 +7,6 @@ import AppLayoutVue from '@/layout/AppLayout.vue'
 import productRoutes from './modules/product'
 import settingRoutes from './modules/setting'
 import systemRoutes from './modules/system'
-import articleRoutes from './modules/article'
 import { store } from '@/store'
 
 const routes: RouteRecordRaw[] = [
@@ -29,7 +28,6 @@ const routes: RouteRecordRaw[] = [
       productRoutes,
       settingRoutes,
       systemRoutes,
-      articleRoutes,
     ],
 
   },
