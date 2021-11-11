@@ -14,6 +14,7 @@
     <app-card>
       <template #header>
         <el-button type="primary" @click="visible = true">添加商品规格</el-button>
+        <el-button @click="bindDeleteAll" :disabled="listLoading">批量删除</el-button>
       </template>
       <el-table
         :data="rulelist"
@@ -22,7 +23,9 @@
         style="width: 100%"
         :disabled="listLoading"
         v-loading="listLoading"
+        @selection-change="handleSelectionChange"
       >
+        <el-table-column type="selection" width="55" />
         <el-table-column prop="id" label="ID" />
         <el-table-column prop="rule_name" label="规格名称" />
         <el-table-column prop="attr_name" label="商品规格" />
@@ -51,11 +54,12 @@
       ></app-pagination>
     </app-card>
   </page-container>
-  <dialogAttrTemplateVue v-model="visible"></dialogAttrTemplateVue>
+  <dialogAttrTemplateVue v-model="visible" @success="success" v-model:attr-id="attrId"></dialogAttrTemplateVue>
 </template>
 
 <script lang='ts' setup>
-import { getRuleList } from '@/api/attr';
+import { deleteRule, getRuleList } from '@/api/attr';
+import { ElMessage } from 'element-plus';
 import { onMounted, ref } from 'vue';
 import dialogAttrTemplateVue from './dialogAttrTemplate.vue';
 
@@ -68,6 +72,8 @@ const listParams = ref<ruleParams>({
 const rulelist = ref<ruleList[]>([])
 const listCount = ref<number>()
 const listLoading = ref(false)
+const attrId = ref<number>(0)
+const ids = ref<string>('')
 
 const visible = ref(false)
 
@@ -82,6 +88,46 @@ const loadRuleList = async () => {
   })
   rulelist.value = list
   listCount.value = count
+}
+
+const handleQuery = () => {
+  loadRuleList()
+}
+
+const handleSelectionChange = (e: ruleList[]) => {
+  let arr = e.map(v => v.id)
+  ids.value = arr.join(',')
+}
+
+const bindDeleteAll = () => {
+  _deleteRule(ids.value)
+
+}
+
+// 点击单个删除
+const handleDelete = (id: number) => {
+  _deleteRule(id + '')
+}
+// 删除
+const _deleteRule = async (ids: string) => {
+  await deleteRule(ids)
+  loadRuleList()
+  ElMessage({
+    type: 'success',
+    message: '删除成功',
+  })
+}
+
+// 保存成功
+const success = () => {
+  visible.value = false
+  loadRuleList()
+}
+
+// 点击编辑
+const handleUpdate = (id: number) => {
+  attrId.value = id
+  visible.value = true
 }
 
 </script>

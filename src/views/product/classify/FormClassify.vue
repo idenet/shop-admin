@@ -1,6 +1,6 @@
 <template>
   <app-dialog-form
-    :title="props.id ? '编辑分类' : '添加分类'"
+    :title="props.cateId ? '编辑分类' : '添加分类'"
     @closed="handleDialogClosed"
     @open="handleDialogOpen"
     :confirm="handleConfirm"
